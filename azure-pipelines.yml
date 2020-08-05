@@ -16,6 +16,7 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/deployment'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret)'
     backendType: 'azurerm'
     backendServiceArm: 'azure-subscription-manager-connection'
     ensureBackend: true
