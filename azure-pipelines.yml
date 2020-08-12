@@ -31,7 +31,7 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/deployment/'
     environmentServiceName: 'azure-terraform-aks-in28minutes-connection-manager-resource'
-    commandOptions: '-var client_id=$(client_id) -var client_sesecret)'
+    commandOptions: ' -var="key=client_id" -var="key=client_sesecret" '
 
 # - task: TerraformCLI@0
 #   inputs:
