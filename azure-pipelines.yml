@@ -26,12 +26,12 @@ steps:
     backendAzureRmContainerName: 'kubernetescontainerppp'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
 
-# - task: TerraformCLI@0
-#   inputs:
-#     command: 'apply'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/deployment'
-#     environmentServiceName: 'azure-subscription-manager-connection'
-#     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) )'
+- task: TerraformCLI@0
+  inputs:
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/deployment'
+    environmentServiceName: 'azure-terraform-aks-in28minutes-connection-manager-resource'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) )'
 
 # - task: TerraformCLI@0
 #   inputs:
