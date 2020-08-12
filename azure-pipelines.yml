@@ -16,7 +16,7 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/deployment/'
-    #commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret)'
+    #cret=$(client_commandOptions: '-var client_id=$(client_id) -var client_sesecret)'
     backendType: 'azurerm'
     backendServiceArm: 'azure-terraform-aks-in28minutes-connection-manager-resource'
     ensureBackend: true
@@ -31,7 +31,7 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/deployment/'
     environmentServiceName: 'azure-terraform-aks-in28minutes-connection-manager-resource'
-    #commandOptions: '-var "client_id"=$("client_id") -var "client_secret"=$("client_secret") )'
+    commandOptions: '-var client_id=$(client_id) -var client_sesecret)'
 
 # - task: TerraformCLI@0
 #   inputs:
